@@ -1,0 +1,138 @@
+.aboutMe {
+  padding: 110px 70px 101px 70px;
+  background-color: #202020;
+}
+
+.aboutMe__heading {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  margin: 0;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #DADADA;
+  text-align: left;
+  letter-spacing: -0.04em;
+}
+
+.aboutMe__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 270px;
+  padding-top: 66px;
+  text-align: left;
+}
+
+.aboutMe__name {
+  font-size: 50px;
+  line-height: 58px;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.aboutMe__occupation {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+  margin: 18px 0 26px 0;
+}
+
+.aboutMe__description {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 99px;
+  max-width: 600px;
+}
+
+.aboutMe__image {
+  width: 270px;
+  height: 327px;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+
+.aboutMe__git {
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.5s linear;
+}
+
+.aboutMe__git:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 1279px) {
+  .aboutMe {
+    padding: 90px 50px 90px 50px;
+  }
+
+  .aboutMe__name {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .aboutMe__occupation {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 16px 0 20px 0;
+  }
+
+  .aboutMe__container {
+    gap: 49px;
+  }
+
+  .aboutMe__description {
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 364px;
+    margin-bottom: 87px;
+  }
+
+  .aboutMe__image {
+    width: 255px;
+    height: 307px;
+  }
+}
+
+@media (max-width: 767px) {
+  .aboutMe {
+    padding: 70px 14px;
+  }
+
+  .aboutMe__heading {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 28px;
+  }
+
+  .aboutMe__container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .aboutMe__image {
+    width: 292px;
+    height: 352px;
+  }
+
+  .aboutMe__name {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .aboutMe__occupation {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .aboutMe__description {
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 40px;
+  }
+}

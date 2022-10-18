@@ -1,0 +1,135 @@
+.profile {
+  padding-top: 74px;
+  padding-bottom: 70px;
+}
+
+.profile__heading {
+  margin: 0 0 0 0;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 500;
+}
+
+.profile__form {
+  margin-top: 123px;
+  margin-bottom: 14px;
+}
+
+.profile__field {
+  display: flex;
+  justify-content: space-between;
+  width: 410px;
+  margin: auto;
+  border: none;
+  padding: 0;
+}
+
+.profile__label {
+  width: 141px;
+  height: 14px;
+  display: block;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: left;
+}
+
+.profile__input {
+  background-color: transparent;
+  width: 239px;
+  text-align: right;
+  color: #fff;
+  font-size: 11px;
+  line-height: 13px;
+  display: block;
+  outline: none;
+  border: none;
+}
+
+.profile__hr {
+  width: 410px;
+  line-height: 1px;
+  color: #424242;
+  margin-top: 17px;
+  margin-bottom: 17px;
+}
+
+.profile__submit-button {
+  font-size: 13px;
+  line-height: 16px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  margin-top: 215px;
+  cursor: pointer;
+  transition: opacity 0.5s linear;
+}
+
+.profile__submit-button:hover {
+  opacity: 0.5;
+}
+
+.profile__log-out{
+  font-size: 13px;
+  line-height: 16px;
+  color: #EE3465;
+  text-decoration: none;
+  transition: opacity 0.5s linear;
+}
+
+.profile__log-out:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 1279px) {
+  .profile {
+    padding-top: 236px;
+    padding-bottom: 269px;
+  }
+
+  .profile__form {
+    margin-top: 96px;
+  }
+
+  .profile__submit-button {
+    margin-top: 205px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .profile {
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+
+  .profile__form {
+    margin-top: 80px;
+  }
+
+  .profile__field {
+    width: 260px;
+  }
+
+  .profile__label {
+    width: 85px;
+  }
+
+  .profile__input {
+    width: 155px;
+  }
+
+  .profile__submit-button {
+    margin-top: 375px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .profile__log-out {
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  .profile__hr {
+    width: 260px;
+  }
+}

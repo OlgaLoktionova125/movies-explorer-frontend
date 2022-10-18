@@ -1,0 +1,111 @@
+.card {
+  overflow: hidden;
+  position: relative;
+}
+
+.card__image {
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border: none;
+  width: 360px;
+  height: 201px;
+  border-radius: 6px;
+}
+
+.card__button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  opacity: 0;
+  border: none;
+  transition: opacity 0.5s linear;
+}
+
+.card__button:hover {
+  opacity: 1;
+}
+
+.card__button_type_save {
+  width: 72px;
+  height: 21px;
+  background-color: #313131;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 10px;
+  line-height: 9px;
+}
+
+.card__button_type_saved {
+  background-image: url(../../images/saved.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 6px;
+  background-color: #EE3465;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+}
+
+.card__button_type_delete {
+  background-image: url(../../images/delete.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 6px;
+  background-color: #313131;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+}
+
+.card__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 14px 0 14px;
+}
+
+.card__movieName {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  margin: 0;
+}
+
+.card__movieDuration {
+  background-color: #2f2f2f;
+  width: 52px;
+  height: 18px;
+  border-radius: 3px;
+  font-size: 11px;
+  line-height: 16px;
+  color: #8b8b8b;
+  margin: 0;
+}
+
+@media (max-width: 1279px) {
+  .card__image {
+    width: 339px;
+    height: 190px;
+  }
+
+  .card__content {
+    padding: 25px 0 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .card__image {
+    width: 300px;
+    height: 168px;
+  }
+
+  .card__content {
+    padding-top: 16px
+  }
+
+  .card__movieName {
+    font-size: 12px;
+    line-height: 15px;
+    line-height: 10px;
+  }
+}

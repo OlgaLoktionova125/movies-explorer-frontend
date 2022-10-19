@@ -7,7 +7,7 @@ function getTime(mins) {
 function MoviesCard(props) {
   return(
     <li className='card'>
-      <img className='card__image' alt='' src={props.link}></img>
+      <img className='card__image' alt={`постер к фильму ${props.name}`} src={props.link}></img>
       <button aria-label='' className={props.buttonClassName}>{props.buttonContent}</button>
       <div className='card__content'>
         <p className='card__movieName'>{props.name}</p>

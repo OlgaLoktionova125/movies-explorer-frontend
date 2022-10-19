@@ -8,17 +8,17 @@ function Register() {
       <form className='register__form'>
         <fieldset className='register__field'>
           <label className='register__label' htmlFor='name'>Имя</label>
-          <input className='register__input' name='name' placeholder='Имя' type='text'></input>
+          <input className='register__input' name='name' placeholder='Имя' type='text' required></input>
           <span className='register__span'>Что-то пошло не так...</span>
         </fieldset>
         <fieldset className='register__field'>
           <label className='register__label' htmlFor='email'>E-mail</label>
-          <input className='register__input' name='email' placeholder='E-mail' type='email'></input>
+          <input className='register__input' name='email' placeholder='E-mail' type='email' required></input>
           <span className='register__span'>Что-то пошло не так...</span>
         </fieldset>
         <fieldset className='register__field'>
           <label className='register__label' htmlFor='password'>Пароль</label>
-          <input className='register__input' name='password' placeholder='Пароль' type='password'></input>
+          <input className='register__input' name='password' placeholder='Пароль' type='password' required></input>
           <span className='register__span'>Что-то пошло не так...</span>
         </fieldset>
         <button className='register__submit-button' type='submit' aria-label='Зарегистрироваться'>Зарегистрироваться</button>

@@ -8,12 +8,12 @@ function Login() {
       <form className='login__form'>
         <fieldset className='login__field'>
           <label className='login__label' htmlFor='email'>E-mail</label>
-          <input className='login__input' name='email' type='email' placeholder='E-mail'></input>
+          <input className='login__input' name='email' type='email' placeholder='E-mail' required></input>
           <span className='login__span'>Что-то пошло не так...</span>
         </fieldset>
         <fieldset className='login__field'>
           <label className='login__label' htmlFor='password'>Пароль</label>
-          <input className='login__input' name='password' type='password' placeholder='Пароль'></input>
+          <input className='login__input' name='password' type='password' placeholder='Пароль' required></input>
           <span className='login__span'></span>
         </fieldset>
         <button className='login__submit-button'>Войти</button>

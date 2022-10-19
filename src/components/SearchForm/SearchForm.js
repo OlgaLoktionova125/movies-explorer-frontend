@@ -4,7 +4,7 @@ function SearchForm() {
   return(
     <section className='form'>
       <form className='form__search'>
-        <input className='form__input' type='text' placeholder='Фильм'></input>
+        <input className='form__input' type='text' placeholder='Фильм' required></input>
         <button className='form__button' aria-label='найти'>Найти</button>
       </form>
       <FilterCheckbox />

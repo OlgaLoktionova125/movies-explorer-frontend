@@ -40,6 +40,7 @@
 
   .movies__list {
     gap: 47px 30px;
+    grid-template-columns: repeat(2, minmax(300px, max-content));
   }
 
   .movies__button {
@@ -54,6 +55,7 @@
 
   .movies__list {
     gap: 39px;
+    grid-template-columns: minmax(300px, max-content);
   }
 
   .movies__button {

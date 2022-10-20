@@ -1,0 +1,60 @@
+.error {
+  padding-top: 246px;
+  padding-bottom: 60px;
+}
+
+.error__statusCode {
+  font-size: 140px;
+  line-height: 169px;
+  margin: 0;
+}
+
+.error__message {
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 5px;
+  margin-bottom: 184px;
+}
+
+.error__link {
+  color: #4285F4;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+  transition: opacity 0.5s linear;
+}
+
+.error__link:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 1279px) {
+  .error {
+    padding-top: 408px;
+    padding-bottom: 222px;
+  }
+}
+
+@media (max-width: 767px) {
+  .error {
+    padding-top: 329px;
+    padding-bottom: 30px;
+  }
+
+  .error__statusCode {
+    font-size: 80px;
+    line-height: 97px;
+  }
+
+  .error__message {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 10px;
+    margin-bottom: 284px;
+  }
+
+  .error__link {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

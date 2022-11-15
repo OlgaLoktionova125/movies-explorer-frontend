@@ -3,30 +3,21 @@ import AboutProject from '../AboutProject/AboutProject';
 import Techs from '../Techs/Techs';
 import AboutMe from '../AboutMe/AboutMe';
 import Portfolio from '../Portfolio/Portfolio';
-import { Route } from 'react-router-dom';
-import SearchForm from '../SearchForm/SearchForm';
-import MoviesCardList from '../MoviesCardList/MoviesCardList';
+import Footer from '../Footer/Footer';
+import Header from '../Header/Header';
 
-function Main() {
-    return(
-        <main className='main'>
-          <Route exact path='/'>
-            <Promo />
-            <AboutProject />
-            <Techs />
-            <AboutMe />
-            <Portfolio />
-          </Route>
-          <Route path='/movies'>
-            <SearchForm />
-            <MoviesCardList />
-          </Route>
-          <Route path='/saved-movies'>
-            <SearchForm />
-            <MoviesCardList />
-          </Route>
-        </main>
-    )
+function Main({ loggedIn }) {
+  return(
+    <>
+      <Header loggedIn={loggedIn}/>
+      <Promo />
+      <AboutProject />
+      <Techs />
+      <AboutMe />
+      <Portfolio />
+      <Footer />
+    </>
+  )
 }
 
 export default Main;

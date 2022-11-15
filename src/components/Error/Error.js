@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-function Error(props) {
+function Error() {
   return(
     <section className='error'>
-      <p className='error__statusCode'>{props.statusCode}</p>
-      <p className='error__message'>{props.message}</p>
+      <p className='error__statusCode'>{404}</p>
+      <p className='error__message'>Страница не найдена</p>
       <Link className='error__link' to='/'>Назад</Link>
     </section>
   )

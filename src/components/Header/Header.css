@@ -15,11 +15,11 @@
   }
 }
 
-.header__mainPage {
+.header__notLoggedIn {
   background-color: #073042;
 }
 
-.header__notMainPage {
+.header__loggedIn {
   background-color: #202020;
 }
 

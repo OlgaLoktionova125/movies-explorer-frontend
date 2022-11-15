@@ -19,6 +19,7 @@
   opacity: 0;
   border: none;
   transition: opacity 0.5s linear;
+  cursor: pointer;
 }
 
 .card__button:hover {

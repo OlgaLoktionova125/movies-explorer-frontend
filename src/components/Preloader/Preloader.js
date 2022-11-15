@@ -1,14 +1,11 @@
-import React from 'react'
-import './Preloader.css'
-
-const Preloader = () => {
+function Preloader({isLoad}) {
     return (
-        <div className="preloader">
-            <div className="preloader__container">
-                <span className="preloader__round"></span>
+        <div className={`preloader ${isLoad ? 'preloader_active':''}`}>
+            <div className='preloader__container'>
+                <span className='preloader__round'></span>
             </div>
         </div>
     )
 };
 
-export default Preloader
+export default Preloader;

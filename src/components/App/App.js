@@ -76,7 +76,7 @@ function App() {
   }, [loggedIn]);
 
   function getSavedMovies() {
-    
+
     mainApi.getMovies()
       .then((movies) => {
         setSavedMoviesCards(
@@ -121,7 +121,6 @@ function App() {
     auth.login(email, password)
       .then((data) => {
         setLoggedIn(true);
-        // setCurrentUser(data);
         localStorage.setItem("jwt", data.token);
         mainApi.setJwt(data.token);
         history.push('/movies')

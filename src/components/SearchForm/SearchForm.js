@@ -13,9 +13,11 @@ function SearchForm({ searchMovie, movies, onChecked, isShort }) {
 
   function onSubmit(data) {
     searchMovie(data.text, movies)
-    // if (location.pathname === '/movies') {
-    //   localStorage.setItem('text', data.text)
-    // }
+    if (location.pathname === '/movies') {
+      localStorage.setItem('text', data.text)
+    } else {
+      setNewValue('');
+    }
   }
 
   const checkKeyDown = (e) => {
@@ -50,7 +52,6 @@ function SearchForm({ searchMovie, movies, onChecked, isShort }) {
         movies={movies}
       />
     </section>
-
   )
 };
 

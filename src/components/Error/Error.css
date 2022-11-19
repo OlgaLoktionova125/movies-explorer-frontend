@@ -16,15 +16,17 @@
   margin-bottom: 184px;
 }
 
-.error__link {
+.error__button {
   color: #4285F4;
   font-size: 14px;
   line-height: 17px;
-  text-decoration: none;
   transition: opacity 0.5s linear;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.error__link:hover {
+.error__button:hover {
   opacity: 0.5;
 }
 
@@ -53,7 +55,7 @@
     margin-bottom: 284px;
   }
 
-  .error__link {
+  .error__button {
     font-size: 12px;
     line-height: 15px;
   }

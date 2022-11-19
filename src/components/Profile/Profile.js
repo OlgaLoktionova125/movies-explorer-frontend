@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import Header from '../Header/Header';
 
-function Profile({loggedIn, onLogout, onUserUpdate, isError, errorMessage}) {
+function Profile({loggedIn, onLogout, onUserUpdate, profileMessage}) {
 
   const currentUser = useContext(CurrentUserContext);
 
@@ -62,7 +62,7 @@ function Profile({loggedIn, onLogout, onUserUpdate, isError, errorMessage}) {
             {errors.email?.type === 'required' && 'Это поле не может быть пустым'}
             {errors.email?.type === 'pattern' && 'Поле содержит некорректные данные'}
           </span>
-          <p className={`profile__error-message ${isError ? 'profile__error-message_active':''}`}>{errorMessage}</p>
+          <p className='profile__error-message'>{profileMessage}</p>
           <button aria-label='подтверждение' disabled={!isValid ? true : false} className={`profile__submit-button ${!isValid ? 'profile__button_disabled':''}`} type='submit'>Редактировать</button>
         </form>
         <Link className='profile__log-out' to='/' onClick={onLogout}>Выйти из аккаунта</Link>

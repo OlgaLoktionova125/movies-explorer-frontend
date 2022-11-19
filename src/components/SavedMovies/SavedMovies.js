@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import MoviesCardList from '../MoviesCardList/MoviesCardList';
@@ -11,8 +12,8 @@ function SavedMovies({loggedIn, movies, moviesCards, message, isShort, onChecked
   useEffect(() => {
     if(loggedIn) {
       onSearched(false);
-      setSearchMessage('')
-      getSavedMovies()
+      setSearchMessage('');
+      getSavedMovies();
     }
   }, [loggedIn]);
 

@@ -34,6 +34,7 @@ function App() {
   const [searchMessage, setSearchMessage] = useState('');
   const [savedSearchedMoviesCards, setSavedSearchedMoviesCards] = useState([]);
   const [isSearched, setIsSearched] = useState(false);
+  const [profileMessage, setProfileMessage] = useState('');
 
   useEffect(() => {
     checkToken();
@@ -41,9 +42,9 @@ function App() {
 
   useEffect(() => {
     if (loggedIn) {
-      Promise.all([mainApi.getCurrentUser(), moviesApi.getMovies()])
-        .then(([user, movies]) => {
-          setCurrentUser(user);
+      Promise.all([moviesApi.getMovies(), mainApi.getCurrentUser()])
+        .then(([movies, info]) => {
+          setCurrentUser(info);
           localStorage.setItem('movies', JSON.stringify(movies));
           setMovies(JSON.parse(localStorage.getItem('movies')));
         })
@@ -75,6 +76,7 @@ function App() {
   }, [loggedIn]);
 
   function getSavedMovies() {
+    
     mainApi.getMovies()
       .then((movies) => {
         setSavedMoviesCards(
@@ -119,6 +121,7 @@ function App() {
     auth.login(email, password)
       .then((data) => {
         setLoggedIn(true);
+        // setCurrentUser(data);
         localStorage.setItem("jwt", data.token);
         mainApi.setJwt(data.token);
         history.push('/movies')
@@ -150,13 +153,14 @@ function App() {
     })
       .then((res) => {
         setCurrentUser(res);
-        setIsError(false);
+        setProfileMessage('Данные успешно обновлены!')
       })
       .catch((err) => {
         console.log(err);
-        setIsError(true);
-        if (err === 409) {
-          setErrorMessage('Пользователь с таким адресом почты уже существует');
+        if (err.statusCode === 409) {
+          setProfileMessage('Пользователь с таким адресом почты уже существует!');
+        } else {
+          setProfileMessage('Что-то пошло не так... Попробуйте позже!');
         }
       })
   };
@@ -170,9 +174,13 @@ function App() {
         .then(data => {
           setIsError(false);
           setLoggedIn(true);
-          history.push('/movies');
+          setCurrentUser(data);
+          history.push(location.pathname);
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log(err);
+          onLogout();
+        })
     } else {
         setLoggedIn(false);
     }
@@ -194,6 +202,8 @@ function App() {
             setSearchMessage('');
           }
 
+          getSavedMovies();
+
           setMoviesCards(searchedMovies.map((movie) => ({
             movieId: movie.id,
             country: movie.country,
@@ -207,6 +217,8 @@ function App() {
             director: movie.director,
             thumbnail: `${moviesUrl}/${movie.image.url}`
           })))
+
+
         }, 2000);
 
         localStorage.setItem('moviesCards', JSON.stringify(searchedMovies))
@@ -274,7 +286,18 @@ function App() {
             <Route exact path='/'>
               <Main loggedIn={loggedIn}/>
             </Route>
+            <Route path='/signup'>
+              {loggedIn
+              ? <Redirect to='/movies' />
+              : <Register onRegister={onRegister} isError={isError} errorMessage={errorMessage}/>}
+            </Route>
+            <Route path='/signin'>
+              {loggedIn
+              ? <Redirect to='/movies' />
+              : <Login onLogin={onLogin} isError={isError}/>}
+            </Route>
             <ProtectedRoute
+              exact
               path='/movies'
               component={Movies}
               loggedIn={loggedIn}
@@ -289,6 +312,7 @@ function App() {
               onChecked={setIsShort}
             />
             <ProtectedRoute
+              exact
               path='/saved-movies'
               component={SavedMovies}
               loggedIn={loggedIn}
@@ -305,24 +329,14 @@ function App() {
               setSearchMessage={setSearchMessage}
             />
             <ProtectedRoute
+              exact
               path='/profile'
               component={Profile}
               onLogout={onLogout}
               loggedIn={loggedIn}
               onUserUpdate={handleUpdateUser}
-              isError={isError}
-              errorMessage={errorMessage}
+              profileMessage={profileMessage}
             />
-            <Route path='/signup'>
-              {loggedIn
-              ? <Redirect to='/movies' />
-              : <Register onRegister={onRegister} isError={isError} errorMessage={errorMessage}/>}
-            </Route>
-            <Route path='/signin'>
-              {loggedIn
-              ? <Redirect to='/movies' />
-              : <Login onLogin={onLogin} isError={isError}/>}
-            </Route>
             <Route path = '*'>
               <Error />
             </Route>

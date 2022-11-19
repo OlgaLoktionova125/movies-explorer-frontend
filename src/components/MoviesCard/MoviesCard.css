@@ -16,14 +16,9 @@
   position: absolute;
   top: 14px;
   right: 14px;
-  opacity: 0;
   border: none;
   transition: opacity 0.5s linear;
   cursor: pointer;
-}
-
-.card__button:hover {
-  opacity: 1;
 }
 
 .card__button_type_save {

@@ -57,11 +57,6 @@
   color: #EE3465;
   font-size: 13px;
   line-height: 16px;
-  display: none;
-}
-
-.profile__error-message_active {
-  display: block;
 }
 
 .profile__hr {

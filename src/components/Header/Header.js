@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 
-function Header(props) {
+function Header({loggedIn}) {
     return(
-        <header className={`header ${props.mainPage ? 'header__mainPage' : 'header__notMainPage'}`}>
+        <header className={`header ${loggedIn ? 'header__loggedIn' : 'header__notLoggedIn'}`}>
             <Link className='header__logo' to='/'></Link>
-            <Navigation loggedIn={props.loggedIn}/>
+            <Navigation loggedIn={loggedIn}/>
         </header>
     )
 }

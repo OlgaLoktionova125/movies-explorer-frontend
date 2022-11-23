@@ -46,6 +46,19 @@
   border: none;
 }
 
+.profile__span {
+  font-size: 10px;
+  line-height: 12px;
+  color: #EE3465;
+  display: block;
+}
+
+.profile__error-message {
+  color: #EE3465;
+  font-size: 13px;
+  line-height: 16px;
+}
+
 .profile__hr {
   width: 410px;
   line-height: 1px;
@@ -67,6 +80,10 @@
 
 .profile__submit-button:hover {
   opacity: 0.5;
+}
+
+.profile__button_disabled {
+  cursor: none;
 }
 
 .profile__log-out{
@@ -93,6 +110,7 @@
 
   .profile__submit-button {
     margin-top: 205px;
+    display: block;
   }
 }
 

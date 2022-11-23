@@ -39,6 +39,12 @@
   opacity: 0.5;
 }
 
+.form__error {
+  color: #EE3465;
+  font-size: 13px;
+  line-height: 16px;
+}
+
 @media (max-width: 1279px) {
   .form {
     padding-left: 30px;

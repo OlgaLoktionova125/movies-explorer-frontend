@@ -2,7 +2,7 @@ import arrow from '../../images/arrow.svg';
 
 function Portfolio() {
   return(
-    <section className='portfolio'>
+    <section className='portfolio' id='portfolio'>
       <h3 className='portfolio__heading'>Портфолио</h3>
       <ul className='portfolio__list'>
         <li className='portfolio__item'>

@@ -1,5 +1,9 @@
 # movies-explorer-frontend
 
+[Ссылка на проект](https://movies-diploma.nomorepartiesxyz.ru)
+
+[Ссылка на макет figma](https://www.figma.com/file/f36vqLEgAE00oOB9cKuuSq/Diploma-Copy)
+
 ## **Описание проекта**
 
 Фронтенд приложения для поиска фильмов, с возможностью сохранения/удаления их из избранного. 
@@ -43,7 +47,3 @@
 `npm i` - установка зависимостей  
 `npm run start` - запуск проекта  
 `npm run build` - запуск сборки проекта  
-
-[Ссылка на проект](https://movies-diploma.nomorepartiesxyz.ru)
-
-[Ссылка на макет figma](https://www.figma.com/file/f36vqLEgAE00oOB9cKuuSq/Diploma-Copy)

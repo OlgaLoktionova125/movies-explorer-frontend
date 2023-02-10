@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "scp -r ./build/* olgaloktionova@84.252.130.126:/home/olgaloktionova/frontend"
+    "deploy": "scp -r ./build/* olgaloktionova@158.160.41.31:/home/olgaloktionova/frontend"
   },
   "eslintConfig": {
     "extends": [

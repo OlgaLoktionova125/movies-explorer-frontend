@@ -1,6 +1,6 @@
 export const moviesUrl = 'https://api.nomoreparties.co';
 
-export const BASE_URL = 'https://api.movies-diploma.nomoredomains.club';
+export const BASE_URL = 'https://api.movies-diploma.nomorepartiesxyz.ru';
 
 export const config = {
     url: BASE_URL,
